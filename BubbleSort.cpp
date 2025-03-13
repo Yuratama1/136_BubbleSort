@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
  
-int arr[25];
+int arr[15];
 int n; // input jumlah data
 
  void inputData(){
@@ -49,10 +49,25 @@ int n; // input jumlah data
     
     pass = pass + 1; // step 4
     } while (pass <= n - 1); // step 5
-} 
+}
+void displayData()
+{
+    cout << endl;
+    cout << "======================" << endl;
+    cout << "Data setelah diurutkan" << endl;
+    cout << "======================";
+    cout << endl;
     
- int main()
+    for (int i = 0; i < n; i++)
+    {
+        cout << "Data ke-" << i + 1 << " = " << arr[i] << endl;
+    }
+}
+
+int main()
  {
     inputData();
     BubbleSort();
+    displayData();
+    return 0;
  }
